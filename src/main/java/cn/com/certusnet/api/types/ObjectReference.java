@@ -11,11 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class ObjectReference<AttrType extends ApiPropertyBase> implements Serializable {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	List<String> to;
     String href;
     AttrType attr;

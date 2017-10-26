@@ -12,12 +12,9 @@ import java.util.ArrayList;
 import com.google.common.collect.ImmutableList;
 
 
-
+@SuppressWarnings("serial")
 public class VirtualNetwork extends ApiObjectBase {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+ 
 	private EcmpHashingIncludeFields ecmp_hashing_include_fields;
     private VirtualNetworkType virtual_network_properties;
     private ProviderDetails provider_properties;

@@ -11,12 +11,8 @@ import java.util.List;
 import java.util.ArrayList;
 import com.google.common.collect.ImmutableList;
 
-
+@SuppressWarnings("serial")
 public class NetworkIpam extends ApiObjectBase {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private IpamType network_ipam_mgmt;
     private IdPermsType id_perms;
     private PermType2 perms2;

@@ -11,11 +11,9 @@ import java.util.List;
 import com.google.common.collect.ImmutableList;
 
 
+@SuppressWarnings("serial")
 public class VirtualDns extends ApiObjectBase {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+
 	private VirtualDnsType virtual_DNS_data;
     private IdPermsType id_perms;
     private PermType2 perms2;

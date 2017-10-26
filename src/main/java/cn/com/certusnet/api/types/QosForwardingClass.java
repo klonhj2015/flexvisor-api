@@ -12,11 +12,9 @@ import java.util.ArrayList;
 import com.google.common.collect.ImmutableList;
 
 
+@SuppressWarnings("serial")
 public class QosForwardingClass extends ApiObjectBase {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+
 	private Integer dscp;
     private boolean trusted;
     private IdPermsType id_perms;

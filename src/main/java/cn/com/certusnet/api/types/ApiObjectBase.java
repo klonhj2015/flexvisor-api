@@ -12,11 +12,8 @@ import java.util.List;
 import java.util.Iterator;
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public abstract class ApiObjectBase implements Serializable {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private String name;
     private String uuid;
     private List<String> fq_name;

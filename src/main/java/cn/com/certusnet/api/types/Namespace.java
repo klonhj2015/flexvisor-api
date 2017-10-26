@@ -10,47 +10,35 @@ package cn.com.certusnet.api.types;
 import java.util.List;
 import com.google.common.collect.ImmutableList;
 
-
 @SuppressWarnings("serial")
-public class QosQueue extends ApiObjectBase {
-
-	private Integer min_bandwidth;
-    private Integer max_bandwidth;
+public class Namespace extends ApiObjectBase {
+    private SubnetType namespace_cidr;
     private IdPermsType id_perms;
     private PermType2 perms2;
     private String display_name;
-    private transient List<ObjectReference<ApiPropertyBase>> qos_forwarding_class_back_refs;
+    private transient List<ObjectReference<SubnetType>> project_back_refs;
 
     @Override
     public String getObjectType() {
-        return "qos-queue";
+        return "namespace";
     }
 
     @Override
     public List<String> getDefaultParent() {
-        return ImmutableList.of("default-domain", "default-project");
+        return ImmutableList.of("default-domain");
     }
 
     @Override
     public String getDefaultParentType() {
-        return "project";
+        return "domain";
     }
     
-    public Integer getMinBandwidth() {
-        return min_bandwidth;
+    public SubnetType getCidr() {
+        return namespace_cidr;
     }
     
-    public void setMinBandwidth(Integer min_bandwidth) {
-        this.min_bandwidth = min_bandwidth;
-    }
-    
-    
-    public Integer getMaxBandwidth() {
-        return max_bandwidth;
-    }
-    
-    public void setMaxBandwidth(Integer max_bandwidth) {
-        this.max_bandwidth = max_bandwidth;
+    public void setCidr(SubnetType namespace_cidr) {
+        this.namespace_cidr = namespace_cidr;
     }
     
     
@@ -81,7 +69,7 @@ public class QosQueue extends ApiObjectBase {
     }
     
 
-    public List<ObjectReference<ApiPropertyBase>> getQosForwardingClassBackRefs() {
-        return qos_forwarding_class_back_refs;
+    public List<ObjectReference<SubnetType>> getProjectBackRefs() {
+        return project_back_refs;
     }
 }

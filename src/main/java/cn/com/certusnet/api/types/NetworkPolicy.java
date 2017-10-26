@@ -10,12 +10,8 @@ package cn.com.certusnet.api.types;
 import java.util.List;
 import com.google.common.collect.ImmutableList;
 
-
+@SuppressWarnings("serial")
 public class NetworkPolicy extends ApiObjectBase {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private PolicyEntriesType network_policy_entries;
     private IdPermsType id_perms;
     private PermType2 perms2;

@@ -10,47 +10,36 @@ package cn.com.certusnet.api.types;
 import java.util.List;
 import com.google.common.collect.ImmutableList;
 
-
 @SuppressWarnings("serial")
-public class QosQueue extends ApiObjectBase {
-
-	private Integer min_bandwidth;
-    private Integer max_bandwidth;
+public class FloatingIpPool extends ApiObjectBase {
+    private FloatingIpPoolType floating_ip_pool_prefixes;
     private IdPermsType id_perms;
     private PermType2 perms2;
     private String display_name;
-    private transient List<ObjectReference<ApiPropertyBase>> qos_forwarding_class_back_refs;
+    private List<ObjectReference<ApiPropertyBase>> floating_ips;
+    private transient List<ObjectReference<ApiPropertyBase>> project_back_refs;
 
     @Override
     public String getObjectType() {
-        return "qos-queue";
+        return "floating-ip-pool";
     }
 
     @Override
     public List<String> getDefaultParent() {
-        return ImmutableList.of("default-domain", "default-project");
+        return ImmutableList.of("default-domain", "default-project", "default-virtual-network");
     }
 
     @Override
     public String getDefaultParentType() {
-        return "project";
+        return "virtual-network";
     }
     
-    public Integer getMinBandwidth() {
-        return min_bandwidth;
+    public FloatingIpPoolType getPrefixes() {
+        return floating_ip_pool_prefixes;
     }
     
-    public void setMinBandwidth(Integer min_bandwidth) {
-        this.min_bandwidth = min_bandwidth;
-    }
-    
-    
-    public Integer getMaxBandwidth() {
-        return max_bandwidth;
-    }
-    
-    public void setMaxBandwidth(Integer max_bandwidth) {
-        this.max_bandwidth = max_bandwidth;
+    public void setPrefixes(FloatingIpPoolType floating_ip_pool_prefixes) {
+        this.floating_ip_pool_prefixes = floating_ip_pool_prefixes;
     }
     
     
@@ -81,7 +70,11 @@ public class QosQueue extends ApiObjectBase {
     }
     
 
-    public List<ObjectReference<ApiPropertyBase>> getQosForwardingClassBackRefs() {
-        return qos_forwarding_class_back_refs;
+    public List<ObjectReference<ApiPropertyBase>> getFloatingIps() {
+        return floating_ips;
+    }
+
+    public List<ObjectReference<ApiPropertyBase>> getProjectBackRefs() {
+        return project_back_refs;
     }
 }
