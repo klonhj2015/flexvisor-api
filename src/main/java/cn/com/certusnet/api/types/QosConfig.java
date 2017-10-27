@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.google.common.collect.ImmutableList;
 
-
+@SuppressWarnings("serial")
 public class QosConfig extends ApiObjectBase {
     private String qos_config_type;
     private QosIdForwardingClassPairs dscp_entries;
