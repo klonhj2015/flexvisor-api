@@ -71,12 +71,12 @@ public class ApiSerializer {
         return builder.create();
     }
     
-    static ApiObjectBase deserialize(String str, Class<? extends ApiObjectBase> cls) {
+    public static ApiObjectBase deserialize(String str, Class<? extends ApiObjectBase> cls) {
         Gson json = getDeserializer();
         return json.fromJson(str, cls);
     }
     
-    static String serializeObject(String typename, ApiObjectBase obj) {
+    public static String serializeObject(String typename, ApiObjectBase obj) {
         Gson json = getSerializer();
         JsonObject js_dict = new JsonObject();
         js_dict.add(typename, json.toJsonTree(obj));
