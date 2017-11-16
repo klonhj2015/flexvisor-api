@@ -43,7 +43,7 @@ public class VirtualMachineInterface extends ApiObjectBase {
 	private List<ObjectReference<ApiPropertyBase>> physical_interface_refs;
 	private List<ObjectReference<BridgeDomainMembershipType>> bridge_domain_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> virtual_machine_interface_back_refs;
-	private transient List<ObjectReference<ApiPropertyBase>> instance_ip_back_refs;
+	private List<ObjectReference<ApiPropertyBase>> instance_ip_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> subnet_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> floating_ip_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> alias_ip_back_refs;
