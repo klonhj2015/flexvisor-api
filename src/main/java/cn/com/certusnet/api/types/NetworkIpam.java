@@ -18,7 +18,7 @@ public class NetworkIpam extends ApiObjectBase {
     private PermType2 perms2;
     private String display_name;
     private List<ObjectReference<ApiPropertyBase>> virtual_DNS_refs;
-    private transient List<ObjectReference<VnSubnetsType>> virtual_network_back_refs;
+    private List<ObjectReference<VnSubnetsType>> virtual_network_back_refs;
 
     @Override
     public String getObjectType() {

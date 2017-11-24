@@ -50,7 +50,7 @@ public class VirtualMachineInterface extends ApiObjectBase {
 	private transient List<ObjectReference<ApiPropertyBase>> logical_interface_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> bgp_as_a_service_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> customer_attachment_back_refs;
-	private transient List<ObjectReference<ApiPropertyBase>> logical_router_back_refs;
+	private List<ObjectReference<ApiPropertyBase>> logical_router_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> loadbalancer_pool_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> virtual_ip_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> loadbalancer_back_refs;

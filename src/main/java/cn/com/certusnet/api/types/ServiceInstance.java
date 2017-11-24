@@ -27,7 +27,7 @@ public class ServiceInstance extends ApiObjectBase {
 	private transient List<ObjectReference<ServiceInterfaceTag>> interface_route_table_back_refs;
 	private transient List<ObjectReference<RoutingPolicyServiceInstanceType>> routing_policy_back_refs;
 	private transient List<ObjectReference<ServiceInterfaceTag>> route_aggregate_back_refs;
-	private transient List<ObjectReference<ApiPropertyBase>> logical_router_back_refs;
+	private List<ObjectReference<ApiPropertyBase>> logical_router_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> loadbalancer_pool_back_refs;
 	private transient List<ObjectReference<ApiPropertyBase>> loadbalancer_back_refs;
 
