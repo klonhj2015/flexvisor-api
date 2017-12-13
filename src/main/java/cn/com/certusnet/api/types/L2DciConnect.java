@@ -28,12 +28,12 @@ public class L2DciConnect extends ApiObjectBase {
 
     @Override
     public List<String> getDefaultParent() {
-        return ImmutableList.of();
+        return ImmutableList.of("default-domain", "default-project");
     }
 
     @Override
     public String getDefaultParentType() {
-        return null;
+        return "project";
     }
     
     public IdPermsType getIdPerms() {

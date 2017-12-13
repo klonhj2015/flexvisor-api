@@ -54,6 +54,8 @@ public class Project extends ApiObjectBase {
     private List<ObjectReference<ApiPropertyBase>> ipsecpolicys;
     private List<ObjectReference<ApiPropertyBase>> vpn_credentials;
     private List<ObjectReference<ApiPropertyBase>> sslvpn_connections;
+    private List<ObjectReference<ApiPropertyBase>> l2_dci_connects;
+    private List<ObjectReference<ApiPropertyBase>> l3_dci_connects;
     private transient List<ObjectReference<ApiPropertyBase>> floating_ip_back_refs;
 
     @Override
@@ -297,6 +299,14 @@ public class Project extends ApiObjectBase {
         return sslvpn_connections;
     }
 
+    public List<ObjectReference<ApiPropertyBase>> getL2DciConnects() {
+        return l2_dci_connects;
+    }
+
+    public List<ObjectReference<ApiPropertyBase>> getL3DciConnects() {
+        return l3_dci_connects;
+    }
+    
     public List<ObjectReference<ApiPropertyBase>> getFloatingIpBackRefs() {
         return floating_ip_back_refs;
     }
