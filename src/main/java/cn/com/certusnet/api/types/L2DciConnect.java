@@ -16,11 +16,12 @@ import com.google.common.collect.ImmutableList;
 @SuppressWarnings("serial")
 public class L2DciConnect extends ApiObjectBase {
     private Integer l2_dci_vni;
+    private RouteTargetList l2_dci_import_target_list;
+    private RouteTargetList l2_dci_export_target_list;
     private IdPermsType id_perms;
     private PermType2 perms2;
     private String display_name;
     private List<ObjectReference<ApiPropertyBase>> virtual_network_refs;
-    private List<ObjectReference<DCIRouteTargetType>> route_target_refs;
 
     @Override
     public String getObjectType() {
@@ -40,10 +41,29 @@ public class L2DciConnect extends ApiObjectBase {
     public Integer getL2DciVni() {
         return l2_dci_vni;
     }
-
+    
     public void setL2DciVni(Integer l2_dci_vni) {
         this.l2_dci_vni = l2_dci_vni;
     }
+    
+    
+    public RouteTargetList getL2DciImportTargetList() {
+        return l2_dci_import_target_list;
+    }
+    
+    public void setL2DciImportTargetList(RouteTargetList l2_dci_import_target_list) {
+        this.l2_dci_import_target_list = l2_dci_import_target_list;
+    }
+    
+    
+    public RouteTargetList getL2DciExportTargetList() {
+        return l2_dci_export_target_list;
+    }
+    
+    public void setL2DciExportTargetList(RouteTargetList l2_dci_export_target_list) {
+        this.l2_dci_export_target_list = l2_dci_export_target_list;
+    }
+    
     
     public IdPermsType getIdPerms() {
         return id_perms;
@@ -92,36 +112,6 @@ public class L2DciConnect extends ApiObjectBase {
             return;
         }
         virtual_network_refs = null;
-    }
-
-    public List<ObjectReference<DCIRouteTargetType>> getRouteTarget() {
-        return route_target_refs;
-    }
-
-    public void setRouteTarget(RouteTarget obj, DCIRouteTargetType data) {
-        route_target_refs = new ArrayList<ObjectReference<DCIRouteTargetType>>();
-        route_target_refs.add(new ObjectReference<DCIRouteTargetType>(obj.getQualifiedName(), data));
-    }
-
-    public void addRouteTarget(RouteTarget obj, DCIRouteTargetType data) {
-        if (route_target_refs == null) {
-            route_target_refs = new ArrayList<ObjectReference<DCIRouteTargetType>>();
-        }
-        route_target_refs.add(new ObjectReference<DCIRouteTargetType>(obj.getQualifiedName(), data));
-    }
-
-    public void removeRouteTarget(RouteTarget obj, DCIRouteTargetType data) {
-        if (route_target_refs != null) {
-            route_target_refs.remove(new ObjectReference<DCIRouteTargetType>(obj.getQualifiedName(), data));
-        }
-    }
-
-    public void clearRouteTarget() {
-        if (route_target_refs != null) {
-            route_target_refs.clear();
-            return;
-        }
-        route_target_refs = null;
     }
 
 }
