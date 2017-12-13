@@ -15,6 +15,7 @@ import com.google.common.collect.ImmutableList;
 
 @SuppressWarnings("serial")
 public class L2DciConnect extends ApiObjectBase {
+    private Integer l2_dci_vni;
     private IdPermsType id_perms;
     private PermType2 perms2;
     private String display_name;
@@ -34,6 +35,14 @@ public class L2DciConnect extends ApiObjectBase {
     @Override
     public String getDefaultParentType() {
         return "project";
+    }
+    
+    public Integer getL2DciVni() {
+        return l2_dci_vni;
+    }
+
+    public void setL2DciVni(Integer l2_dci_vni) {
+        this.l2_dci_vni = l2_dci_vni;
     }
     
     public IdPermsType getIdPerms() {
